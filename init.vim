@@ -18,6 +18,9 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'honza/vim-snippets'
 
@@ -75,4 +78,8 @@ let g:lightline = {
 \ }
 
 
+" Enable the plugin
+let g:airline#extensions#tabline#enabled = 1
 
+" Show just the buffer number and the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
