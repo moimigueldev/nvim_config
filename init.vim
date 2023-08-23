@@ -28,6 +28,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+Plug 'sindrets/diffview.nvim'
 
 call plug#end()
 
@@ -38,6 +39,7 @@ set tabstop=4 shiftwidth=4 expandtab
 " set autoindent
 set mouse=a
 colorscheme gruvbox
+
 
 " Key mapping for fzf file search using ripgrep
 nnoremap <C-p> :Files<CR>
@@ -83,3 +85,22 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the buffer number and the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+function! ToggleDiffView()
+    if exists('t:DiffviewIsOpen') && t:DiffviewIsOpen
+        silent! DiffviewClose
+        let t:DiffviewIsOpen=0
+    else
+        silent! DiffviewOpen
+        let t:DiffviewIsOpen=1
+    endif
+endfunction
+
+
+nnoremap <leader>dt :call ToggleDiffView()<CR>
+let g:diffview_use_icons = v:false
+
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>qq :q!<CR>
+
