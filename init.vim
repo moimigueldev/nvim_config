@@ -29,6 +29,8 @@ Plug 'tpope/vim-commentary'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'sindrets/diffview.nvim'
+Plug 'ryanoasis/vim-devicons'
+
 
 call plug#end()
 
@@ -103,4 +105,6 @@ let g:diffview_use_icons = v:false
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>qq :q!<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
 
