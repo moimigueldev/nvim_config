@@ -102,6 +102,8 @@ endfunction
 nnoremap <leader>dt :call ToggleDiffView()<CR>
 let g:diffview_use_icons = v:false
 
+
+nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>qq :q!<CR>

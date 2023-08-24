@@ -1,6 +1,7 @@
 {
   "coc.preferences.snippets.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "vue",
     "css",
     "html",
     "javascript",
