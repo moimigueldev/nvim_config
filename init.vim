@@ -1,6 +1,5 @@
 " Set where vim-plug will install plugins
 call plug#begin('~/.config/nvim/plugged')
-
 " NERDTree for file browsing
 Plug 'preservim/nerdtree'
 
@@ -24,14 +23,12 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'honza/vim-snippets'
 
-Plug 'tpope/vim-commentary'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'sindrets/diffview.nvim'
 Plug 'ryanoasis/vim-devicons'
-
-
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 syntax on
@@ -41,6 +38,7 @@ set tabstop=4 shiftwidth=4 expandtab
 " set autoindent
 set mouse=a
 colorscheme gruvbox
+filetype plugin indent on
 
 
 " Key mapping for fzf file search using ripgrep
