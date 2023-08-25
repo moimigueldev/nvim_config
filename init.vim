@@ -59,6 +59,7 @@ inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme='base16'
 
 function! ToggleDiffView()
     if exists('t:DiffviewIsOpen') && t:DiffviewIsOpen
@@ -79,7 +80,8 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>\ :vsp<CR>
+nnoremap <leader>[ <C-w>h
+nnoremap <leader>] <C-w>l
 
-
-let g:airline_theme='base16'
 
