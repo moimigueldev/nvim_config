@@ -13,9 +13,6 @@ call plug#begin('~/.config/nvim/plugged')
 " NERDTree for file browsing
 Plug 'preservim/nerdtree'
 
-" Mimic behavior of cmd+p in vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -34,6 +31,9 @@ Plug 'sindrets/diffview.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
 Plug 'Yggdroot/indentLine'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 syntax on
@@ -45,9 +45,6 @@ set mouse=a
 colorscheme gruvbox
 filetype plugin indent on
 
-" Key mapping for fzf file search using ripgrep
-nnoremap <C-p> :Files<CR>
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs'
 
 " Key Mapping for NerdTree
 nnoremap <C-b> :NERDTreeToggle<CR>
@@ -94,3 +91,6 @@ nnoremap <leader>[ <C-w>h
 nnoremap <leader>] <C-w>l
 
 let g:indentLine_char = '│'
+nnoremap <C-p> :Telescope find_files<CR>
+nnoremap <Leader>f :Telescope live_grep<CR>
+
