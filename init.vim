@@ -33,7 +33,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'sindrets/diffview.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
-
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 syntax on
@@ -93,4 +93,4 @@ nnoremap <leader>\ :vsp<CR>
 nnoremap <leader>[ <C-w>h
 nnoremap <leader>] <C-w>l
 
-
+let g:indentLine_char = '│'
