@@ -93,4 +93,9 @@ nnoremap <leader>] <C-w>l
 let g:indentLine_char = '│'
 nnoremap <C-p> :Telescope find_files<CR>
 nnoremap <Leader>f :Telescope live_grep<CR>
+" Go to the previous buffer with Leader + {
+nnoremap <Leader>{ :bprev<CR>
+
+" Go to the next buffer with Leader + }
+nnoremap <Leader>} :bnext<CR>
 
